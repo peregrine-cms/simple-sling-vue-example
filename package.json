@@ -4,7 +4,8 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "sling": "vue-cli-service build && node buildpackage.js && npx slingpackager package temp d:/projects/sp/simplefe/package.zip && npx slingpackager upload d:/projects/sp/simplefe/package.zip && npx slingpackager install /vuecontentbrowser/vuecontentbrowser-0.1.0.zip"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -12,8 +13,10 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "@peregrinecms/slingpackager": "0.0.1",
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
+    "fs-extra": "^8.1.0",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {
