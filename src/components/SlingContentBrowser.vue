@@ -43,7 +43,7 @@ export default {
     },
     fetch() {
     axios
-      .get(this.nextpath + '.harray.1.json')
+      .get((this.nextpath !== '' ? this.nextpath : '/') + '.harray.1.json')
       .then(response => (this.tree = response.data)).then( (response) => {
         this.path = this.nextpath;
         window.location.hash = this.path;
