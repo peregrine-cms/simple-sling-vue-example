@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "sling": "vue-cli-service build && node buildpackage.js && npx slingpackager package temp && npx slingpackager -i upload vuecontentbrowser-1.0-SNAPSHOT.zip"
+    "sling": "vue-cli-service build && node buildpackage.js && npx slingpackager package temp && npx slingpackager upload -i vuecontentbrowser-1.0-SNAPSHOT.zip"
   },
   "dependencies": {
     "axios": "^0.19.0",
